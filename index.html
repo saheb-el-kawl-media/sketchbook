@@ -540,15 +540,9 @@ button{font:inherit}
 const Q=new URLSearchParams(location.search);
 const DIR='sketchbook/';
 const PAGES=[
-  {file:'marina-bay-sands.png',   title:'Marina Bay Sands',          place:'Bayfront'},
-  {file:'gardens-by-the-bay.png', title:'Gardens by the Bay',        place:'Supertree Grove'},
-  {file:'merlion.png',            title:'The Merlion',               place:'Merlion Park'},
-  {file:'buddha-tooth.png',       title:'Buddha Tooth Relic Temple', place:'Chinatown'},
-  {file:'joo-chiat.png',          title:'Joo Chiat Shophouses',      place:'Katong'},
-  {file:'lau-pa-sat.png',         title:'Lau Pa Sat',                place:'Raffles Quay'},
-  {file:'marina-bay-skyline.png', title:'Marina Bay Skyline',        place:'The Bay'},
-  {file:'singapore-river.png',    title:'Singapore River',           place:'Boat Quay'},
-  {file:'botanic-gardens.png',    title:'Botanic Gardens',           place:'Tanglin'}
+  {file:'bab-souika-gate.png',    title:'Bab Souika Gateway',        place:'Medina'},
+  {file:'bab-souika-alley.png',   title:'Bab Souika Alley',          place:'Tunis'},
+  {file:'bab-souika-souk.png',    title:'Bab Souika Marketplace',    place:'Souk'}
 ];
 PAGES.forEach(p=>p.url=DIR+p.file);
 const M=PAGES.length, LAND=6;
