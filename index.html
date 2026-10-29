@@ -835,8 +835,8 @@ function goTo(i){
   if(Math.min(fwd,back)===1){step(fwd===1?'next':'prev');return;}
   idx=i;paint();
 }
-document.getElementById('sbLeft').onclick=()=>step('prev');
-document.getElementById('sbRight').onclick=()=>step('next');
+document.getElementById('sbLeft').onclick=()=>step('next');
+document.getElementById('sbRight').onclick=()=>step('prev');
 addEventListener('keydown',e=>{
   if(e.key!=='ArrowLeft'&&e.key!=='ArrowRight')return;
   if(e.metaKey||e.ctrlKey||e.altKey)return;
