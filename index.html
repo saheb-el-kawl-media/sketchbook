@@ -629,7 +629,7 @@ function paint(){
     const next=turn.dir==='next';
     book.appendChild(halfEl('left', next?turn.from:turn.to));
     book.appendChild(halfEl('right',next?turn.to:turn.from));
-    book.appendChild(buildCurl(turn.dir,turn.from,turn.to));
+    book.appendChild(buildCurl(turn.dir==='next'?'prev':'next',turn.from,turn.to));
     applyTurn(turn.t);
   }
   const a=el('button','sb-zone sb-prev'),b=el('button','sb-zone sb-next');
@@ -835,8 +835,8 @@ function goTo(i){
   if(Math.min(fwd,back)===1){step(fwd===1?'next':'prev');return;}
   idx=i;paint();
 }
-document.getElementById('sbLeft').onclick=()=>step('next');
-document.getElementById('sbRight').onclick=()=>step('prev');
+document.getElementById('sbLeft').onclick=()=>step('prev');
+document.getElementById('sbRight').onclick=()=>step('next');
 addEventListener('keydown',e=>{
   if(e.key!=='ArrowLeft'&&e.key!=='ArrowRight')return;
   if(e.metaKey||e.ctrlKey||e.altKey)return;
